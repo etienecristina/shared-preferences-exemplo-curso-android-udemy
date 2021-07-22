@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
         dados.putFloat("precoProduto", precoProduto);
         dados.putBoolean("estoque", estoque);
 
+        dados.apply();
+
         Log.i(TAG, "onCreate: Dados para serem salvos: ");
         Log.i(TAG, "onCreate: Código do produto: "+ codigoProduto);
         Log.i(TAG, "onCreate: Nome: "+ nomeProduto);
@@ -55,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate: Preço: "+ precoProduto);
         Log.i(TAG, "onCreate: O produto tem estoque? "+ estoque);
 
+        dados.remove("fornecedorProduto");
         dados.apply();
+
+
     }
 }
